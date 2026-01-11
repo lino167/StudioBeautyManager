@@ -1,29 +1,55 @@
-# Studio Beauty Manager
+# Studio Beauty Manager 💅✨
 
-**Studio Beauty Manager** é uma aplicação Desktop desenvolvida em Python para gerenciamento de estúdios de beleza. O objetivo é facilitar o cadastro de clientes, agendamentos e controle de serviços.
+> **Sistema Moderno de Gestão para Estúdios de Beleza e Clínicas de Estética.**
 
-## Tecnologias Utilizadas
-- **Linguagem**: Python 3
-- **Interface Gráfica**: Tkinter (Nativo do Python)
-- **Banco de Dados**: SQLite
+O **Studio Beauty Manager** é uma aplicação desktop desenvolvida em Python com foco em **experiência do usuário (UX)** e **design moderno**. Diferente dos sistemas tradicionais cinzas e sem vida, este projeto utiliza a biblioteca `CustomTkinter` para entregar uma interface fluida, responsiva e agradável (Dark/Light Mode).
 
-## Estrutura do Projeto (Arquitetura Modular)
-O projeto segue uma arquitetura modular para separar responsabilidades:
+![Home Dashboard](assets/dashboard.png)
 
-- **`main.py`**: Ponto de entrada da aplicação. Inicializa a janela principal.
-- **`database.py`**: Gerencia a conexão com o banco de dados SQLite e execução de queries.
-- **`controllers.py`**: Camada lógica que conecta a interface (UI) com o banco de dados. Contém as regras de negócio.
-- **`ui.py`**: Contém as classes da interface gráfica (Janelas, Frames, Botões, etc).
+## 🚀 Funcionalidades
 
-## Como Rodar a Aplicação
+*   **📅 Agenda Inteligente**: Visualização em Cards dos agendamentos do dia.
+*   **👥 Gestão de Clientes**: Cadastro rápido (Modal) e lista pesquisável de clientes.
+*   **🎨 Design Premium**: Interface inspirada em Apps Mobile, com Navigation Rail e validações visuais.
+*   **💾 Banco Local**: SQLite para armazenamento seguro e rápido, sem necessidade de servidores complexos.
+*   **🌙 Dark/Light Mode**: Adapta-se automaticamente ao tema do seu sistema operacional.
 
-Certifique-se de ter o Python instalado.
+## 📸 Screenshots
 
-1. Clone o repositório (se ainda não o fez).
-2. Execute o arquivo principal:
-   ```bash
-   python main.py
-   ```
+| Dashboard (Agenda) | Gestão de Clientes |
+|:---:|:---:|
+| ![Agenda](assets/agenda_print.png) | ![Clientes](assets/clientes_print.png) |
+| *Visualize seus agendamentos com cards* | *Busque e gerencie seus clientes* |
+
+| Novo Agendamento | Modal de Cadastro |
+|:---:|:---:|
+| ![Form](assets/form_print.png) | ![Modal](assets/modal_print.png) |
+| *Formulário simples e direto* | *Cadastro rápido sem sair da tela* |
+
+## 🛠️ Tecnologias
+
+*   **Linguagem**: Python 3.10+
+*   **GUI**: [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter) (Baseada em Tkinter)
+*   **Banco de Dados**: SQLite3
+*   **Arquitetura**: MVC Modular (Separando Lógica, Interface e Dados)
+
+## 📦 Como Rodar o Projeto
+
+1.  **Clone o repositório**:
+    ```bash
+    git clone https://github.com/seu-usuario/StudioBeautyManager.git
+    cd StudioBeautyManager
+    ```
+
+2.  **Instale as dependências**:
+    ```bash
+    pip install customtkinter packaging pillow
+    ```
+
+3.  **Execute a aplicação**:
+    ```bash
+    python main.py
+    ```
 
 ---
-*Projeto em desenvolvimento.*
+Desenvolvido com 💙 por [Seu Nome]
