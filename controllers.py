@@ -15,6 +15,18 @@ class StudioController:
         self.db.cursor.execute("SELECT id, nome, preco, duracao FROM servicos")
         return self.db.cursor.fetchall()
 
+    def listar_agendamentos(self):
+        """Retorna todos os agendamentos com nomes legíveis."""
+        query = """
+            SELECT a.id, p.nome, s.nome, a.data, a.hora_inicio, a.hora_fim
+            FROM agendamentos a
+            JOIN profissionais p ON a.fk_profissional = p.id
+            JOIN servicos s ON a.fk_servico = s.id
+            ORDER BY a.data, a.hora_inicio
+        """
+        self.db.cursor.execute(query)
+        return self.db.cursor.fetchall()
+
     def calcular_fim_servico(self, inicio_str, id_servico):
         """
         Calcula o horário de término com base no início e duração do serviço.
@@ -34,7 +46,7 @@ class StudioController:
             # Converte string para objeto datetime para somar minutos
             formato = "%H:%M"
             inicio_dt = datetime.strptime(inicio_str, formato)
-            fim_dt = inicio_dt + timedelta(minutos=duracao_minutos)
+            fim_dt = inicio_dt + timedelta(minutes=duracao_minutos)
 
             return fim_dt.strftime(formato)
         except Exception as e:
